@@ -27,7 +27,7 @@ Before setting up the project, ensure you have the following prerequisites insta
  ### Clone the Repository:
 
    ```bash
-   git clone https://github.com/your_username/esp32-parkinsons.git
+   git clone https://github.com/yassinhawari/Parkinsons_Detection_IOT.git
    cd esp32-parkinson
    ```
 ### Install PlatformIO:
