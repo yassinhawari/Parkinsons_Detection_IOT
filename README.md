@@ -24,7 +24,7 @@ Before setting up the project, ensure you have the following prerequisites insta
 
 ## ESP32 Setup
 
- **Clone the Repository:**
+ ### Clone the Repository:
 
    ```bash
    git clone https://github.com/your_username/esp32-parkinsons.git
@@ -46,14 +46,12 @@ Modify main.cpp to adjust sampling rates, data processing algorithms, and Wi-Fi 
 ### Install Dependencies:
 
 ```bash
-Copier le code
 cd Flask_App
 pip install -r requirements.txt
 ```
 Run Flask App:
 
 ```bash
-Copier le code
 python app.py
 ```
 ### Access the Web Interface:
@@ -74,13 +72,12 @@ ESP32 collects audio and vibration data, sending it wirelessly to the Flask serv
 Flask processes the data, runs it through machine learning models or algorithms, and displays prediction results related to Parkinson's Disease symptoms.
 
 ## Project Structure
-/ESP32_Code/: Contains ESP32 firmware code (main.cpp).
-main.cpp: Firmware for ESP32 microcontroller.
-/Flask_App/: Flask application files.
-app.py: Main Flask application script.
-templates/: HTML templates for Flask web pages.
-static/: Static files (CSS, JavaScript) for enhancing the web interface.
-Additional Note
+- /ESP32_Code/: Contains ESP32 firmware code (main.cpp).
+- main.cpp: Firmware for ESP32 microcontroller.
+- /Flask_App/: Flask application files.
+- app.py: Main Flask application script.
+- templates/: HTML templates for Flask web pages.
+## Additional Note
 Adjust vibration thresholds (ADXL362) and audio processing algorithms (INMP441) in main.cpp to optimize sensor readings.
 Ensure ESP32 and Flask server are connected to the same Wi-Fi network for seamless data transmission.
 Experiment with different machine learning models or signal processing techniques within Flask to enhance prediction accuracy.
