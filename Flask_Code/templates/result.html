@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Result - ESP32 and Flask App</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar {
+            background-image: url('https://img.freepik.com/photos-gratuite/fond-blanc-grungy-ciment-naturel-texture-ancienne-pierre-comme-mur-motif-retro-banniere-murale-conceptuelle-grunge-materiel-construction_1258-82897.jpg?t=st=1719013869~exp=1719017469~hmac=41ebcd32cd8501b924c13acff65b882f84074458c28077a8a924ff970da7b714&w=826');
+            background-size: cover;
+            background-attachment: fixed;
+            border-bottom: 2px solid #dee2e6;
+            padding: 20px;
+            margin-bottom: -100px; /* Reduced margin */
+        }
+
+        .navbar-brand {
+            font-size: 40px;
+            margin-left: 10px;
+        }
+
+        body {
+            background-image: url("https://img.freepik.com/photos-gratuite/chambre-noire-fond-clair_1409-1809.jpg?t=st=1719493721~exp=1719497321~hmac=3ab1e0fd36b789c00156c3e1b0a91047aa4a34cada53bd09320fe79dbfa71268&w=740");
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            padding-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 75vh; /* This can be adjusted to bring the cards and button closer together vertically */
+        }
+        
+        .card {
+            border-radius: 20px;
+            box-shadow: 1px 1px 20px rgba(0,0,0,0.3);
+            padding: 20px;
+            background-color: #ffffff;
+            margin: 13px; /* Adjusted for uniform spacing */
+            flex: 1; /* Each card will take equal width */
+            text-align: center;
+            background-image: url('https://img.freepik.com/vecteurs-libre/fond-abstrait-blanc_23-2148817571.jpg?t=st=1719493976~exp=1719497576~hmac=3e9d1ebebfe94f648b6e7990f4614d175947fb670f2f5daae584a3a8e02701b4&w=740');
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .btn-primary {
+            width: auto;
+            padding: 10px 30px;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #0056b3;
+            color: white;
+            border-radius: 50px;
+        }
+        .btn-primary:hover {
+            background-color: #003580;
+            color: #ffffff;
+        }
+        .result-text h3 {
+            margin: 20px 0;
+            color: #333;
+            font-weight: 600;
+        }
+        .header-text {
+            margin-bottom: 10px; /* Reduced margin */
+            color: #2c3e50;
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+        <a class="navbar-brand" style="color:white" href="#">
+            <i class="fa fa-bar-chart" style="font-size:36px"></i> Dashboard
+        </a>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h1 class="header-text">Vibration Detection <i class="fa fa-heartbeat" style="font-size:36px;"></i></h1>
+            <div class="result-text">
+                <h3>{{ 'Yes' if vibration else 'No' }}</h3>
+            </div>
+        </div>
+        <div class="card">
+            <h1 class="header-text"> Parkinson Prediction <i class="fa fa-volume-up" style="font-size:36px"></i> </h1>
+            <div class="result-text">
+                <h3>{{ status }}</h3>
+            </div>
+        </div>
+    </div>
+    <center><a href="/" class="btn btn-primary mt-2">Back to Home <i class="fa fa-home"></i></a></center> <!-- Reduced margin-top -->
+</body>
+</html>
